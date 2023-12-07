@@ -86,14 +86,14 @@ class _TitleText extends StatelessWidget {
           children: [
             Transform.translate(
               offset: Offset(-(TextStyles.h1.letterSpacing! * .5), 0),
-              child: Text('OUTPOST', style: TextStyles.h1),
+              child: Text('INFERNO', style: TextStyles.h1),
             ),
             Image.asset(AssetPaths.titleSelectedLeft, height: 65),
-            Text('57', style: TextStyles.h2),
+            Text('40', style: TextStyles.h2),
             Image.asset(AssetPaths.titleSelectedRight, height: 65),
           ],
         ).animate().fadeIn(delay: .8.seconds, duration: .7.seconds),
-        Text('INTO THE UNKNOWN', style: TextStyles.h3)
+        Text('ESPOCH', style: TextStyles.h3)
             .animate()
             .fadeIn(delay: 1.seconds, duration: .7.seconds),
       ],
@@ -142,7 +142,7 @@ class _DifficultyBtns extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         _DifficultyBtn(
-          label: 'Casual',
+          label: 'Info',
           selected: difficulty == 0,
           onPressed: () => onDifficultyPressed(0),
           onHover: (over) => onDifficultyFocused(over ? 0 : null),
@@ -151,7 +151,7 @@ class _DifficultyBtns extends StatelessWidget {
             .fadeIn(delay: 1.3.seconds, duration: .35.seconds)
             .slide(begin: const Offset(0, .2)),
         _DifficultyBtn(
-          label: 'Normal',
+          label: 'Manual',
           selected: difficulty == 1,
           onPressed: () => onDifficultyPressed(1),
           onHover: (over) => onDifficultyFocused(over ? 1 : null),
@@ -160,7 +160,7 @@ class _DifficultyBtns extends StatelessWidget {
             .fadeIn(delay: 1.5.seconds, duration: .35.seconds)
             .slide(begin: const Offset(0, .2)),
         _DifficultyBtn(
-          label: 'Hardcore',
+          label: 'Salir',
           selected: difficulty == 2,
           onPressed: () => onDifficultyPressed(2),
           onHover: (over) => onDifficultyFocused(over ? 2 : null),
@@ -282,7 +282,7 @@ class _StartBtnState extends State<_StartBtn> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('START MISSION',
+                    Text('EMPEZAR PARTIDA',
                         style: TextStyles.btn
                             .copyWith(fontSize: 24, letterSpacing: 18)),
                   ],
